@@ -6,8 +6,8 @@ services:
     container_name: flaskapp
     ports:
       - "5000:5000"
-    volumes:
-      - ./app:/app/app
+    environment:
+      - FLASK_APP=app.py
 
   grafana:
     image: grafana/grafana-oss:latest
@@ -16,11 +16,11 @@ services:
       - "3001:3000"
     environment:
       - GF_AUTH_ANONYMOUS_ENABLED=true
-      - GF_AUTH_ANONYMOUS_ORG_ROLE=viewer
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Viewer
       - GF_SECURITY_ALLOW_EMBEDDING=true  
       - GF_EXPLORE_ENABLED=false
       - GF_DASHBOARDS_MIN_REFRESH_INTERVAL=5s
-      
+
     volumes:
       - grafana-data:/var/lib/grafana
 
