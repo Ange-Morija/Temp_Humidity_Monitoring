@@ -2,6 +2,9 @@
 
 A smart home solution for monitoring temperature and humidity using ESP32, DHT11 sensor, and a web dashboard.
 
+![image](https://github.com/user-attachments/assets/a649b9ab-faa9-4a02-80ae-27fe8c6d7588)
+
+
 ## Features
 
 - ESP32 reads temperature and humidity from a DHT11 sensor and sends the data directly to InfluxDB Cloud.
